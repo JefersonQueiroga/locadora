@@ -1,4 +1,4 @@
-# Nome do Projeto
+# Locadora web
 
 Projeto da disciplina de Programação para Internet - IFRN
 
