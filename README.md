@@ -20,12 +20,12 @@ Instruções passo a passo sobre como configurar o ambiente de desenvolvimento.
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/jefersonqueiroga/seu-repositorio.git
+    git clone https://github.com/JefersonQueiroga/locadora.git
     ```
 
 2. Navegue até o diretório do projeto:
     ```bash
-    cd seu-repositorio
+    cd locadora
     ```
 
 3. Crie um ambiente virtual:
