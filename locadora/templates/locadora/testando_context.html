@@ -1,0 +1,33 @@
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Locadora IFRN</title>
+  </head>
+  <body>
+        <div class="container">
+            <h1>Testando Context</h1
+            <p>Nome: {{ nome }}</p>
+            <p>Idade: {{ idade }}</p> 
+            
+            {% if is_admin %}
+                <p>Usuário é administrador</p>
+            {% else %}
+                <p>Usuário não é administrador</p>
+            {% endif %}
+        </div>        
+  </body>
+</html>

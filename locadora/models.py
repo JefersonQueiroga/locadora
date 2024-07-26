@@ -14,6 +14,7 @@ class Filme(models.Model):
     sinopse = models.TextField()
     diretor = models.CharField(max_length=100)
     genero = models.ForeignKey(Genero, on_delete=models.CASCADE)
+    valor = models.DecimalField(max_digits=5, decimal_places=2)
     
     def __str__(self):
         return self.titulo

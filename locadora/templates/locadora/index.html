@@ -1,10 +1,88 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Website</title>
-</head>
-<body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a basic HTML template.</p>
-</body>
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Locadora IFRN</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-5"  href="#">Locadora IFRN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-5">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lançamento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Preços</a>
+            </li>
+          </ul>
+          
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-primary">Login</button>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+    
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1>Bem-vindo à Locadora IFRN</h1>
+        <p class="lead text-muted">Descubra nossa coleção selecionada de filmes e séries, curada com carinho por nossa equipe apaixonada por cinema. Oferecemos uma variedade de gêneros para todos os gostos, desde comédias leves até thrillers emocionantes. Explore e encontre o entretenimento perfeito para sua próxima sessão de cinema em casa.</p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Conheça nossos lançamentos</a>
+          <a href="#" class="btn btn-secondary my-2">Veja os mais populares</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card mb-3 shadow-sm">
+            <img src="https://via.placeholder.com/100" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Título do filme</h5>
+              <p class="card-text">Descrição do filme</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver detalhes</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+                </div>
+                <small class="text-muted">R$ 9,99</small>
+              </div>
+            </div>
+          </div>      
+        </div>  
+     
+
+      </div>
+    </div>
+
+  </body>
 </html>
