@@ -18,6 +18,7 @@ def index(request):
 def testando_context(request):
     context = {
         'nome': 'João',
+        'email': 'joao@gmail.com',
         'idade': 30,
         'cidade': 'São Paulo',
         'is_admin': False,
