@@ -16,11 +16,12 @@ def index(request):
     return render(request, 'locadora/index.html',context)
 
 def testando_context(request):
-    context = {
+    contexto = {
         'nome': 'João',
         'email': 'joao@gmail.com',
         'idade': 30,
         'cidade': 'São Paulo',
+        'cep': '59900-000',
         'is_admin': False,
     }
-    return render(request, 'locadora/testando_context.html',context)
+    return render(request, 'locadora/testando_context.html',contexto)
