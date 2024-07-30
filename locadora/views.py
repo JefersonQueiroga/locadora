@@ -10,18 +10,25 @@ def requisicao_parametros(request, nome):
 
 def index(request):
     filmes = Filme.objects.all()
-    context = {
-        'filmes': filmes
+    dicionario = {
+        'lista': filmes
     }
-    return render(request, 'locadora/index.html',context)
+    return render(request, 'locadora/index.html',dicionario)
 
 def testando_context(request):
-    contexto = {
-        'nome': 'João',
+    dados = {
+        'nome': 'José',
         'email': 'joao@gmail.com',
-        'idade': 30,
+        'idade': 20,
         'cidade': 'São Paulo',
         'cep': '59900-000',
         'is_admin': False,
     }
-    return render(request, 'locadora/testando_context.html',contexto)
+    return render(request, 'locadora/testando_context.html',dados)
+    
+
+def lancamento(request):
+    return render(request, 'locadora/lancamento.html')
+
+def precos(request):
+    return render(request, 'locadora/precos.html')

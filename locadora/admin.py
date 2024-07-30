@@ -8,3 +8,4 @@ class FilmeAdmin(admin.ModelAdmin):
     search_fields = ('titulo', 'diretor')
 
 
+admin.site.register(Genero)

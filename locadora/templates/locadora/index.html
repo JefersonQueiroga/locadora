@@ -29,10 +29,10 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Lançamento</a>
+              <a class="nav-link" href="{% url 'lancamento' %}">Lançamento</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Preços</a>
+              <a class="nav-link" href="{%  url 'precos' %}">Preços</a>
             </li>
           </ul>
           
@@ -62,23 +62,24 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
-          <div class="card mb-3 shadow-sm">
-            <img src="https://via.placeholder.com/100" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Título do filme</h5>
-              <p class="card-text">Descrição do filme</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver detalhes</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+        {% for filme in lista %}
+          <div class="col-md-3">
+            <div class="card mb-3 shadow-sm">
+              <img src="https://via.placeholder.com/100" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"> {{ filme.titulo }} </h5>
+                <p class="card-text">{{ filme.sinopse }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver detalhes</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+                  </div>
+                  <small class="text-muted">R$ {{ filme.valor }}</small>
                 </div>
-                <small class="text-muted">R$ 9,99</small>
               </div>
-            </div>
-          </div>      
-        </div>  
-     
+            </div>      
+          </div>  
+        {% endfor %}
 
       </div>
     </div>
